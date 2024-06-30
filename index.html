@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Recipe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Delicious Chocolate Cake</h1>
+        </header>
+
+        <section class="recipe-image">
+            <img src="chocolate-cake.jpg" alt="Delicious Chocolate Cake">
+        </section>
+
+        <section class="ingredients">
+            <h2>Ingredients</h2>
+            <ul>
+                <li>1 and 3/4 cups (220g) all-purpose flour</li>
+                <li>1 and 1/2 cups (300g) granulated sugar</li>
+                <li>3/4 cup (75g) unsweetened cocoa powder</li>
+                <li>2 teaspoons baking powder</li>
+                <li>1 and 1/2 teaspoons baking soda</li>
+                <li>1 teaspoon salt</li>
+                <li>2 large eggs</li>
+                <li>1 cup (240ml) whole milk</li>
+                <li>1/2 cup (120ml) vegetable oil</li>
+                <li>2 teaspoons vanilla extract</li>
+                <li>1 cup (240ml) boiling water</li>
+            </ul>
+        </section>
+
+        <section class="instructions">
+            <h2>Instructions</h2>
+            <ol>
+                <li>Preheat your oven to 350°F (177°C) and grease and flour two 9-inch round baking pans.</li>
+                <li>In a large bowl, whisk together the flour, sugar, cocoa powder, baking powder, baking soda, and salt.</li>
+                <li>Add the eggs, milk, oil, and vanilla extract to the dry ingredients and mix until smooth.</li>
+                <li>Carefully add the boiling water to the mixture, stirring continuously. The batter will be thin.</li>
+                <li>Divide the batter evenly between the prepared baking pans.</li>
+                <li>Bake for 30-35 minutes, or until a toothpick inserted into the center comes out clean.</li>
+                <li>Allow the cakes to cool in the pans for 10 minutes, then remove them from the pans and transfer to a wire rack to cool completely.</li>
+                <li>Frost with your favorite chocolate frosting and enjoy!</li>
+            </ol>
+        </section>
+        <button onclick="window.print()">Print Recipe</button>
+        <section class="rating">
+            <h2>Rate this recipe:</h2>
+            <span class="star" onclick="rate(1)">&#9733;</span>
+            <span class="star" onclick="rate(2)">&#9733;</span>
+            <span class="star" onclick="rate(3)">&#9733;</span>
+            <span class="star" onclick="rate(4)">&#9733;</span>
+            <span class="star" onclick="rate(5)">&#9733;</span>
+        </section>
+        
+    </div>
+    <script>
+        function rate(stars) {
+            const allStars = document.querySelectorAll('.rating .star');
+            allStars.forEach((star, index) => {
+                star.classList.toggle('active', index < stars);
+            });
+            alert(`You rated this recipe ${stars} stars!`);
+        }
+    </script>
+    
+</body>
+</html>
